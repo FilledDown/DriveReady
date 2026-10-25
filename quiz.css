@@ -1,0 +1,163 @@
+.quiz {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.question {
+    padding: 20px;
+    border: 1px solid #dedbd3;
+    border-radius: 4px;
+    background: #fbfaf7;
+}
+
+.question legend {
+    float: left;
+    width: 100%;
+    margin-bottom: 12px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.choice {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    clear: both;
+    padding: 10px 12px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    transition: background-color 150ms ease;
+}
+
+.choice:hover {
+    background: #f0eee7;
+}
+
+.choice input {
+    margin-top: 5px;
+    accent-color: var(--accent-color);
+}
+
+.choice.correct {
+    border-color: #2e7d32;
+    background: #e8f3e8;
+}
+
+.choice.wrong {
+    border-color: #d92d20;
+    background: #fdecea;
+}
+
+.question.missed {
+    border-color: #d92d20;
+}
+
+.explanation {
+    margin-top: 10px;
+    color: #77716a;
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+
+.quiz > p {
+    color: #77716a;
+    font-size: 0.9rem;
+}
+
+.quiz button,
+.result button {
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    background: var(--accent-color);
+    color: white;
+    border: 2px solid white;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 150ms ease-in-out, background-color 150ms ease-in-out, border-color 150ms ease-in-out;
+}
+
+.quiz button:hover,
+.result button:hover {
+    color: var(--text-color);
+    background-color: white;
+    border: 2px solid black;
+}
+
+.result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border: 2px solid var(--text-color);
+}
+
+.result[hidden] {
+    display: none;
+}
+
+.result.pass {
+    border-color: #2e7d32;
+}
+
+.result.fail {
+    border-color: #d92d20;
+}
+
+.result p:first-child {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.result h2 {
+    font-size: 1.9rem;
+    font-weight: 600;
+}
+
+.result p:last-child {
+    color: #77716a;
+    font-size: 0.9rem;
+}
+
+.result .buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.result .buttons a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: var(--accent-color) 2px solid;
+    background-color: var(--base-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+.result .buttons a:hover {
+    background-color: var(--accent-color);
+    color: var(--base-color);
+    transition: 90ms ease-in-out;
+}
+
+.result .buttons a:active {
+    transform: scale(0.85);
+    transition: 70ms ease-in-out;
+}
+
+@media (max-width: 650px) {
+    .result {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

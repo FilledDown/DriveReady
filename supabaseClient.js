@@ -1,0 +1,1 @@
+const sb = supabase.createClient('https://pnsxdjklaqppdsznoxun.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBuc3hkamtsYXFwcGRzem5veHVuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI4NTk4MTksImV4cCI6MjEwODQzNTgxOX0.Oyfb0SRYWf7WBLPMhl-RfzK_FDjWr-SMn8TBC8LE330')

@@ -1,0 +1,9 @@
+{
+  "name": "driveready",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@google/genai": "^2.28.0",
+    "@supabase/supabase-js": "^2.118.0"
+  }
+}

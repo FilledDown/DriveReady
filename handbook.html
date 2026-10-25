@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveReady | Handbooks</title>
+    <link rel="stylesheet" href="handbook.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+    <script src="supabaseClient.js" defer></script>
+    <script src="states.js" defer></script>
+    <script src="storage.js" defer></script>
+    <script src="account.js" defer></script>
+    <script src="ai.js" defer></script>
+    <script src="handbook.js" defer></script>
+</head>
+<body>
+
+    <main class="content handbook-page">
+
+        <a class="back-link" href="permitest.html">← ALL STATES</a>
+
+        <header class="handbook-header">
+            <h1 id="state-title">State handbooks</h1>
+            <a id="official-link" class="official-link"
+               href="#" target="_blank" rel="noopener noreferrer">
+                Find the handbook
+            </a>
+        </header>
+
+        <section class="stats">
+            <div class="stat">
+                <span class="eyebrow">QUESTIONS ON THE TEST</span>
+                <strong id="question-count">—</strong>
+            </div>
+            <div class="stat">
+                <span class="eyebrow">PASS MARK</span>
+                <strong id="pass-mark">—</strong>
+            </div>
+            <div class="stat">
+                <span class="eyebrow">CORRECT ANSWERS NEEDED</span>
+                <strong id="correct-needed">—</strong>
+            </div>
+        </section>
+
+        <p class="disclaimer" id="disclaimer">
+            Based on the official permit test. Check your state's DMV to be sure.
+        </p>
+
+        <div class="handbook-layout">
+            <section class="available-section">
+                <div class="section-heading">
+                    <h2>Available handbooks</h2>
+                    <span id="handbook-total">0 TOTAL</span>
+                </div>
+
+                <div id="handbook-list">
+                    <h3>No handbooks yet.</h3>
+                    <p>Upload an official handbook to study.</p>
+                </div>
+            </section>
+
+            <aside class="upload-card">
+                <span class="eyebrow">CONTRIBUTE</span>
+                <h2>Upload a handbook</h2>
+                <p>Upload the official PDF and AI will write a practice test from it.</p>
+
+                <form id="upload-form">
+                    <label for="handbook-title">Title</label>
+                    <input
+                        id="handbook-title"
+                        name="title"
+                        type="text"
+                        placeholder="State Driver Handbook"
+                        required
+                    >
+
+                    <label class="file-picker" for="handbook-file" id="file-picker">
+                        <span class="eyebrow">PDF FILE</span>
+                        <strong id="file-label">Choose or drop a file...</strong>
+                        <span>Up to 50 MB · 1000 pages</span>
+                    </label>
+
+                    <input
+                        id="handbook-file"
+                        name="file"
+                        type="file"
+                        accept="application/pdf,.pdf"
+                    >
+
+                    <button type="submit" class="upload-button">
+                        Upload and Generate
+                    </button>
+
+                    <p id="upload-message" class="upload-message"></p>
+                </form>
+            </aside>
+        </div>
+
+    </main>
+
+</body>
+</html>

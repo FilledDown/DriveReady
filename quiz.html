@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="permittest.css">
+    <link rel="stylesheet" href="quiz.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+    <script src="supabaseClient.js" defer></script>
+    <script src="states.js" defer></script>
+    <script src="storage.js" defer></script>
+    <script src="account.js" defer></script>
+    <script src="quiz.js" defer></script>
+    <title>DriveReady | Quiz</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <h1>DriveReady</h1>
+
+            <div class="links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="permitest.html" class="active">Permit Test</a>
+            </div>
+
+            <div class="account">
+                <p class="name"></p>
+                <p class="letter"></p>
+                <button type="button" id="logout">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
+                        <path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h280v80H200Zm440-160-55-58 102-102H360v-80h327L585-622l55-58 200 200-200 200Z"/>
+                    </svg>
+                    Log Out
+                </button>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="welcomes">
+                <p id="quiz-label">Permit Test</p>
+                <h1 id="quiz-title">Quiz</h1>
+                <p id="quiz-info"></p>
+            </div>
+
+            <div class="result" id="result" hidden></div>
+
+            <form id="quiz-form" class="quiz"></form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/generate-test.js": {
+      "maxDuration": 300
+    }
+  }
+}
