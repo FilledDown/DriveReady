@@ -62,6 +62,8 @@ Configure Storage policies to allow authenticated users to upload and download o
 
 The project is configured for Vercel. Deploy it as a Vercel project and set `GEMINI_API_KEY` in the project's environment variables. The Supabase project must also be configured as described above. The `api/generate-test.js` function has a 300-second maximum duration configured in `vercel.json`.
 
+or just visit the site on `https://driveready-lac.vercel.app/`
+
 ## Project layout
 
 | Path | Purpose |
